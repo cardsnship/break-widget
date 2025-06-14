@@ -24,13 +24,8 @@ body {
   position: relative;
 }
 .team-card img {
-  width: 60px;
-  height: 60px;
-}
-.team-card .name {
-  margin-top: 6px;
-  font-size: 0.8rem;
-  text-align: center;
+  width: 80px;
+  height: 80px;
 }
 .team-card.sold {
   opacity: 0.35;
