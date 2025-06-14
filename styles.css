@@ -10,7 +10,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 12px;
+  gap: 6px;
 }
 .team-card {
   width: 100px;
