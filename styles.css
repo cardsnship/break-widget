@@ -2,9 +2,9 @@ body {
   background: #111;
   color: #fff;
   font-family: sans-serif;
+  justify-content: center;
   margin: 0;
   padding: 20px;
-  justify-content: center;
   max-width: 870px;
 }
 .grid-container {
