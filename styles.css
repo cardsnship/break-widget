@@ -4,13 +4,13 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 20px;
+  justify-content: center;
   max-width: 870px;
 }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 12px;
-  justify-content: center;
 }
 .team-card {
   width: 100px;
