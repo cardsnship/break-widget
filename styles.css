@@ -8,7 +8,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 12px;
+  gap: 6px;
   justify-content: center;
 }
 .team-card {
@@ -22,7 +22,7 @@ body {
   border-radius: 8px;
   transition: transform 0.4s ease-in-out;
   transform-style: preserve-3d;
-  perspective: 400px;
+  perspective: 800px;
   border: 2px solid transparent;
   position: relative;
 }
