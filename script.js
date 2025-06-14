@@ -51,5 +51,16 @@ async function loadTeams() {
   prevSoldState = { ...sold };
 }
 
+function clearTeams() {
+  const existingCards = document.querySelectorAll('.team-card');
+  existingCards.forEach(card => card.remove());
+}
+
+function refreshTeams() {
+  clearTeams();
+  loadTeams();
+}
+
 loadTeams();
-setInterval(loadTeams, 5000);
+setInterval(refreshTeams, 5000);
+
