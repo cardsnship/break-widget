@@ -9,7 +9,6 @@
   },
   {
     "id": "ARL",
-    "name": "Atlanta Falcons",
     "logo": "assets/logos/nfl/ATL.webp",
     "colors": [
       "#00338D",
@@ -18,7 +17,6 @@
   },
   {
     "id": "BAL",
-    "name": "Baltimore Ravens",
     "logo": "assets/logos/nfl/BAL.webp",
     "colors": [
       "#00338D",
@@ -27,7 +25,6 @@
   },
   {
     "id": "BUF",
-    "name": "Buffalo Bills",
     "logo": "assets/logos/nfl/BUF.webp",
     "colors": [
       "#00338D",
@@ -36,7 +33,6 @@
   },
   {
     "id": "CAR",
-    "name": "Carolina Panthers",
     "logo": "assets/logos/nfl/CAR.webp",
     "colors": [
       "#00338D",
@@ -45,7 +41,6 @@
   },
   {
     "id": "CHI",
-    "name": "Chicago Bears",
     "logo": "assets/logos/nfl/CHI.webp",
     "colors": [
       "#00338D",
@@ -54,7 +49,6 @@
   },
   {
     "id": "CIN",
-    "name": "Cincinnati Bengals",
     "logo": "assets/logos/nfl/CIN.webp",
     "colors": [
       "#00338D",
@@ -63,7 +57,6 @@
   },
   {
     "id": "CLE",
-    "name": "Cleveland Browns",
     "logo": "assets/logos/nfl/CLE.webp",
     "colors": [
       "#00338D",
@@ -72,7 +65,6 @@
   },
   {
     "id": "DAL",
-    "name": "Dallas Cowboys",
     "logo": "assets/logos/nfl/DAL.webp",
     "colors": [
       "#00338D",
@@ -81,7 +73,6 @@
   },
   {
     "id": "DEN",
-    "name": "Denver Broncos",
     "logo": "assets/logos/nfl/DEN.webp",
     "colors": [
       "#00338D",
@@ -90,7 +81,6 @@
   },
   {
     "id": "DET",
-    "name": "Detroit Lions",
     "logo": "assets/logos/nfl/DET.webp",
     "colors": [
       "#00338D",
@@ -99,7 +89,6 @@
   },
   {
     "id": "GB",
-    "name": "Green Bay Packers",
     "logo": "assets/logos/nfl/GB.webp",
     "colors": [
       "#00338D",
@@ -108,7 +97,6 @@
   },
   {
     "id": "HOU",
-    "name": "Houston Texans",
     "logo": "assets/logos/nfl/HOU.webp",
     "colors": [
       "#00338D",
@@ -117,7 +105,6 @@
   },
   {
     "id": "IND",
-    "name": "Indianapolis Colts",
     "logo": "assets/logos/nfl/IND.webp",
     "colors": [
       "#00338D",
@@ -126,7 +113,6 @@
   },
   {
     "id": "JAX",
-    "name": "Jacksonville Jaguars",
     "logo": "assets/logos/nfl/JAX.webp",
     "colors": [
       "#00338D",
@@ -135,16 +121,14 @@
   },
   {
     "id": "KC",
-    "name": "Kansas City Chiefs",
     "logo": "assets/logos/nfl/KC.webp",
     "colors": [
-      "#E31837",
-      "#FFB81C"
+      "#00338D",
+      "#C60C30"
     ]
   },
   {
     "id": "LAC",
-    "name": "Los Angeles Chargers",
     "logo": "assets/logos/nfl/LAC.webp",
     "colors": [
       "#00338D",
@@ -153,7 +137,6 @@
   },
   {
     "id": "LAR",
-    "name": "Los Angeles Rams",
     "logo": "assets/logos/nfl/LAR.webp",
     "colors": [
       "#00338D",
@@ -162,7 +145,6 @@
   },
   {
     "id": "LV",
-    "name": "Las Vegas Raiders",
     "logo": "assets/logos/nfl/LV.webp",
     "colors": [
       "#00338D",
@@ -171,7 +153,6 @@
   },
   {
     "id": "MIA",
-    "name": "Miami Dolphins",
     "logo": "assets/logos/nfl/MIA.webp",
     "colors": [
       "#00338D",
@@ -180,7 +161,6 @@
   },
   {
     "id": "MIN",
-    "name": "Minnesota Vikings",
     "logo": "assets/logos/nfl/MIN.webp",
     "colors": [
       "#00338D",
@@ -189,7 +169,6 @@
   },
   {
     "id": "NE",
-    "name": "New England Patriots",
     "logo": "assets/logos/nfl/NE.webp",
     "colors": [
       "#00338D",
@@ -198,7 +177,6 @@
   },
   {
     "id": "NO",
-    "name": "New Orleans Saints",
     "logo": "assets/logos/nfl/NO.webp",
     "colors": [
       "#00338D",
@@ -207,7 +185,6 @@
   },
   {
     "id": "NYG",
-    "name": "New York Giants",
     "logo": "assets/logos/nfl/NYG.webp",
     "colors": [
       "#00338D",
@@ -216,7 +193,6 @@
   },
   {
     "id": "NYJ",
-    "name": "New York Jets",
     "logo": "assets/logos/nfl/NYJ.webp",
     "colors": [
       "#00338D",
@@ -225,7 +201,6 @@
   },
   {
     "id": "PHI",
-    "name": "Philadelphia Eagles",
     "logo": "assets/logos/nfl/PHI.webp",
     "colors": [
       "#00338D",
@@ -234,7 +209,6 @@
   },
   {
     "id": "PIT",
-    "name": "Pittsburgh Steelers",
     "logo": "assets/logos/nfl/PIT.webp",
     "colors": [
       "#00338D",
@@ -243,7 +217,6 @@
   },
   {
     "id": "SEA",
-    "name": "Seattle Seahawks",
     "logo": "assets/logos/nfl/SEA.webp",
     "colors": [
       "#00338D",
@@ -252,16 +225,14 @@
   },
   {
     "id": "SF",
-    "name": "San Francisco 49ers",
     "logo": "assets/logos/nfl/SF.webp",
     "colors": [
-      "#AA0000",
-      "#B3995D"
+      "#00338D",
+      "#C60C30"
     ]
   },
   {
     "id": "TB",
-    "name": "Tampa Bay Buccaneers",
     "logo": "assets/logos/nfl/TB.webp",
     "colors": [
       "#00338D",
@@ -270,7 +241,6 @@
   },
   {
     "id": "TEN",
-    "name": "Tennessee Titans",
     "logo": "assets/logos/nfl/TEN.webp",
     "colors": [
       "#00338D",
@@ -279,7 +249,6 @@
   },
   {
     "id": "WAS",
-    "name": "Washington Commanders",
     "logo": "assets/logos/nfl/WAS.webp",
     "colors": [
       "#00338D",
