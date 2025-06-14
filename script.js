@@ -51,16 +51,37 @@ async function loadTeams() {
   prevSoldState = { ...sold };
 }
 
-function clearTeams() {
-  const existingCards = document.querySelectorAll('.team-card');
-  existingCards.forEach(card => card.remove());
+const teamStates = {};
+
+async function loadTeams() {
+  try {
+    const res = await fetch(endpoint);
+    const soldSpots = await res.json();
+
+    for (const [teamId, buyer] of Object.entries(soldSpots)) {
+      const card = document.getElementById(teamId);
+
+      if (!card) continue;
+
+      const previouslySold = teamStates[teamId]?.sold;
+      const newSold = !!buyer;
+
+      if (newSold && !previouslySold) {
+        card.classList.add('sold', 'flip');
+        const buyerDiv = document.createElement('div');
+        buyerDiv.className = 'buyer';
+        buyerDiv.textContent = buyer;
+        card.appendChild(buyerDiv);
+      }
+
+      teamStates[teamId] = { sold: newSold };
+    }
+  } catch (err) {
+    console.error('Error loading teams:', err);
+  }
 }
 
-function refreshTeams() {
-  clearTeams();
-  loadTeams();
-}
-
+// Initial load
 loadTeams();
-setInterval(refreshTeams, 5000);
-
+// Then check for updates every 5 seconds
+setInterval(loadTeams, 5000);
