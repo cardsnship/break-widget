@@ -1,63 +1,7 @@
 [
   {
-    "id": "ARI",
-    "logo": "assets/logos/nfl/ARI.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "ARL",
-    "logo": "assets/logos/nfl/ATL.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "BAL",
-    "logo": "assets/logos/nfl/BAL.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "BUF",
-    "logo": "assets/logos/nfl/BUF.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "CAR",
-    "logo": "assets/logos/nfl/CAR.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "CHI",
-    "logo": "assets/logos/nfl/CHI.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "CIN",
-    "logo": "assets/logos/nfl/CIN.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "CLE",
-    "logo": "assets/logos/nfl/CLE.webp",
+    "id": "GB",
+    "logo": "assets/logos/nfl/GB.webp",
     "colors": [
       "#00338D",
       "#C60C30"
@@ -72,64 +16,8 @@
     ]
   },
   {
-    "id": "DEN",
-    "logo": "assets/logos/nfl/DEN.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "DET",
-    "logo": "assets/logos/nfl/DET.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "GB",
-    "logo": "assets/logos/nfl/GB.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "HOU",
-    "logo": "assets/logos/nfl/HOU.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "IND",
-    "logo": "assets/logos/nfl/IND.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "JAX",
-    "logo": "assets/logos/nfl/JAX.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "KC",
-    "logo": "assets/logos/nfl/KC.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "LAC",
-    "logo": "assets/logos/nfl/LAC.webp",
+    "id": "TB",
+    "logo": "assets/logos/nfl/TB.webp",
     "colors": [
       "#00338D",
       "#C60C30"
@@ -144,96 +32,16 @@
     ]
   },
   {
-    "id": "LV",
-    "logo": "assets/logos/nfl/LV.webp",
+    "id": "CIN",
+    "logo": "assets/logos/nfl/CIN.webp",
     "colors": [
       "#00338D",
       "#C60C30"
     ]
   },
   {
-    "id": "MIA",
-    "logo": "assets/logos/nfl/MIA.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "MIN",
-    "logo": "assets/logos/nfl/MIN.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "NE",
-    "logo": "assets/logos/nfl/NE.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "NO",
-    "logo": "assets/logos/nfl/NO.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "NYG",
-    "logo": "assets/logos/nfl/NYG.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "NYJ",
-    "logo": "assets/logos/nfl/NYJ.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "PHI",
-    "logo": "assets/logos/nfl/PHI.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "PIT",
-    "logo": "assets/logos/nfl/PIT.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "SEA",
-    "logo": "assets/logos/nfl/SEA.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "SF",
-    "logo": "assets/logos/nfl/SF.webp",
-    "colors": [
-      "#00338D",
-      "#C60C30"
-    ]
-  },
-  {
-    "id": "TB",
-    "logo": "assets/logos/nfl/TB.webp",
+    "id": "BUF",
+    "logo": "assets/logos/nfl/BUF.webp",
     "colors": [
       "#00338D",
       "#C60C30"
@@ -248,8 +56,200 @@
     ]
   },
   {
+    "id": "KC",
+    "logo": "assets/logos/nfl/KC.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "MIN",
+    "logo": "assets/logos/nfl/MIN.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "PHI",
+    "logo": "assets/logos/nfl/PHI.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "NO",
+    "logo": "assets/logos/nfl/NO.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "SF",
+    "logo": "assets/logos/nfl/SF.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "BAL",
+    "logo": "assets/logos/nfl/BAL.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "NE",
+    "logo": "assets/logos/nfl/NE.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "IND",
+    "logo": "assets/logos/nfl/IND.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "LAC",
+    "logo": "assets/logos/nfl/LAC.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "CHI",
+    "logo": "assets/logos/nfl/CHI.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
     "id": "WAS",
     "logo": "assets/logos/nfl/WAS.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "CAR",
+    "logo": "assets/logos/nfl/CAR.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "ARI",
+    "logo": "assets/logos/nfl/ARI.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "PIT",
+    "logo": "assets/logos/nfl/PIT.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "MIA",
+    "logo": "assets/logos/nfl/MIA.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "HOU",
+    "logo": "assets/logos/nfl/HOU.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "LV",
+    "logo": "assets/logos/nfl/LV.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "DET",
+    "logo": "assets/logos/nfl/DET.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "NYG",
+    "logo": "assets/logos/nfl/NYG.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "ATL",
+    "logo": "assets/logos/nfl/ATL.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "SEA",
+    "logo": "assets/logos/nfl/SEA.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "CLE",
+    "logo": "assets/logos/nfl/CLE.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "NYJ",
+    "logo": "assets/logos/nfl/NYJ.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "JAX",
+    "logo": "assets/logos/nfl/JAX.webp",
+    "colors": [
+      "#00338D",
+      "#C60C30"
+    ]
+  },
+  {
+    "id": "DEN",
+    "logo": "assets/logos/nfl/DEN.webp",
     "colors": [
       "#00338D",
       "#C60C30"
