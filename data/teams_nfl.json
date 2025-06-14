@@ -25,10 +25,11 @@
       "#00338D",
       "#C60C30"
     ]
-  },{
+  },
+  {
     "id": "BUF",
     "name": "Buffalo Bills",
-    "logo": "assets/logos/nfl/buf.webp",
+    "logo": "assets/logos/nfl/BUF.webp",
     "colors": [
       "#00338D",
       "#C60C30"
@@ -136,7 +137,7 @@
   {
     "id": "KC",
     "name": "Kansas City Chiefs",
-    "logo": "assets/logos/nfl/kc.webp",
+    "logo": "assets/logos/nfl/KC.webp",
     "colors": [
       "#E31837",
       "#FFB81C"
@@ -253,7 +254,7 @@
   {
     "id": "SF",
     "name": "San Francisco 49ers",
-    "logo": "assets/logos/nfl/sf.webp",
+    "logo": "assets/logos/nfl/SF.webp",
     "colors": [
       "#AA0000",
       "#B3995D"
