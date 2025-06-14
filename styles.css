@@ -8,7 +8,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 12px;
+  gap: 120px;
   justify-content: center;
 }
 .team-card {
