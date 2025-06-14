@@ -2,7 +2,7 @@
   {
     "id": "BUF",
     "name": "Buffalo Bills",
-    "logo": "assets/logos/nfl/buf.png",
+    "logo": "assets/logos/nfl/buf.webp",
     "colors": [
       "#00338D",
       "#C60C30"
@@ -11,7 +11,7 @@
   {
     "id": "KC",
     "name": "Kansas City Chiefs",
-    "logo": "assets/logos/nfl/kc.png",
+    "logo": "assets/logos/nfl/kc.webp",
     "colors": [
       "#E31837",
       "#FFB81C"
@@ -20,7 +20,7 @@
   {
     "id": "SF",
     "name": "San Francisco 49ers",
-    "logo": "assets/logos/nfl/sf.png",
+    "logo": "assets/logos/nfl/sf.webp",
     "colors": [
       "#AA0000",
       "#B3995D"
