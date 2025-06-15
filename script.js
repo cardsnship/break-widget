@@ -103,11 +103,12 @@ function shuffle(array) {
 }
 
 const shuffledNews = shuffle(newsItems);
-const highlightedNews = shuffledNews.map(item =>
-  item.startsWith("BREAKING:") ?
-    `<span class="breaking">BREAKING:</span>${item.slice(8)}` :
-    item
-);
+const highlightedNews = shuffledNews.map(item => {
+  if (item.startsWith("BREAKING:")) {
+    return `<span class="breaking">BREAKING:</span>${item.slice(8)}`;
+  }
+  return item;
+});
 const loopedText = highlightedNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + highlightedNews.join("  🔥🏈🔥  ");
 marqueeInner.innerHTML = loopedText;
 console.log(loopedText);
