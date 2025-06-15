@@ -16,6 +16,8 @@ body {
   max-width: 840px;
   justify-items: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .team-card {
   width: 100px;
@@ -28,6 +30,9 @@ body {
   transition: transform 0.4s ease-in-out;
   border: 2px solid transparent;
   position: relative;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 1;
 }
 .team-card img {
   width: 90px;
@@ -59,6 +64,7 @@ body {
   border-radius: 6px;
   display: none;
   z-index: 10;
+  pointer-events: none;
 }
 #marquee {
   position: absolute;
@@ -73,6 +79,7 @@ body {
   font-size: 1rem;
   padding: 5px;
   text-align: center;
+  pointer-events: none;
 }
 #marquee .marquee-inner {
   display: inline-block;
