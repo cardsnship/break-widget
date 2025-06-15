@@ -5,6 +5,11 @@ const buyerListContainer = document.getElementById('buyer-list');
 
 const sport = new URLSearchParams(window.location.search).get('sport') || 'nfl';
 const teamStates = {};
+let actionHistory = [];
+
+function logAction(action) {
+  actionHistory.push(action);
+}
 
 async function loadTeams() {
   try {
@@ -22,7 +27,7 @@ async function loadTeams() {
         img.src = team.logo;
         card.appendChild(img);
 
-        teamStates[team.id] = { sold: false };
+        teamStates[team.id] = { sold: false, buyer: null };
         
         card.addEventListener('click', () => {
           if (!teamStates[team.id].sold) {
@@ -30,6 +35,7 @@ async function loadTeams() {
             if (buyer) {
               teamStates[team.id].sold = true;
               teamStates[team.id].buyer = buyer;
+              logAction({ type: 'sell', teamId: team.id, buyer });
               card.classList.add('flip');
               setTimeout(() => {
                 card.classList.add('sold');
@@ -41,6 +47,7 @@ async function loadTeams() {
           } else {
             const confirmUndo = confirm(`Remove ${team.id} from the sold list?`);
             if (confirmUndo) {
+              logAction({ type: 'unsell', teamId: team.id, previousBuyer: teamStates[team.id].buyer });
               teamStates[team.id].sold = false;
               teamStates[team.id].buyer = null;
               card.classList.remove('sold');
@@ -61,7 +68,7 @@ async function loadTeams() {
 function updateBuyerList() {
   buyerListContainer.innerHTML = '';
 
-  const teamOrder = Object.keys(teamStates); // Always 32 boxes
+  const teamOrder = Object.keys(teamStates);
   teamOrder.forEach(teamId => {
     const row = document.createElement('div');
     row.className = 'buyer-row';
@@ -82,18 +89,79 @@ function updateBuyerList() {
 
 function showMessage(text) {
   messageBox.textContent = text;
-
   messageBox.style.animation = 'none';
   void messageBox.offsetWidth;
-  
   messageBox.style.display = 'block';
   messageBox.style.animation = 'popReveal 0.6s ease-out forwards';
-  
   setTimeout(() => {
     messageBox.style.display = 'none';
     messageBox.style.transform = 'translateX(-50%) scale(0)';
     messageBox.style.opacity = '0';
   }, 4000);
+}
+
+function resetAllTeams() {
+  Object.keys(teamStates).forEach(teamId => {
+    teamStates[teamId].sold = false;
+    teamStates[teamId].buyer = null;
+    const card = document.getElementById(teamId);
+    card.classList.remove('sold');
+  });
+  showMessage('All teams have been reset.');
+  updateBuyerList();
+}
+
+function undoLastAction() {
+  const last = actionHistory.pop();
+  if (!last) return;
+  const card = document.getElementById(last.teamId);
+
+  if (last.type === 'sell') {
+    teamStates[last.teamId].sold = false;
+    teamStates[last.teamId].buyer = null;
+    card.classList.remove('sold');
+    showMessage(`Undo: ${last.teamId} is now available.`);
+  } else if (last.type === 'unsell') {
+    teamStates[last.teamId].sold = true;
+    teamStates[last.teamId].buyer = last.previousBuyer;
+    card.classList.add('sold');
+    showMessage(`Undo: ${last.teamId} re-assigned to ${last.previousBuyer}`);
+  }
+  updateBuyerList();
+}
+
+function manualEditBuyer() {
+  const teamId = prompt('Enter team ID to edit:');
+  if (!teamId || !teamStates[teamId]) return;
+  const newBuyer = prompt(`Enter new buyer name for ${teamId}:`);
+  if (newBuyer) {
+    teamStates[teamId].sold = true;
+    teamStates[teamId].buyer = newBuyer;
+    document.getElementById(teamId).classList.add('sold');
+    showMessage(`${teamId} now belongs to ${newBuyer}`);
+    updateBuyerList();
+  }
+}
+
+function executeTrade() {
+  const team1 = prompt('Enter first team ID to trade:');
+  const team2 = prompt('Enter second team ID to trade:');
+  if (team1 && team2 && teamStates[team1] && teamStates[team2]) {
+    const tempBuyer = teamStates[team1].buyer;
+    teamStates[team1].buyer = teamStates[team2].buyer;
+    teamStates[team2].buyer = tempBuyer;
+    showMessage(`Trade executed: ${team1} ⇄ ${team2}`);
+    updateBuyerList();
+  }
+}
+
+function toggleGrid() {
+  teamContainer.style.display = teamContainer.style.display === 'none' ? 'grid' : 'none';
+}
+
+function toggleMarquee() {
+  const marquee = document.getElementById('marquee');
+  marquee.style.display = marquee.style.display === 'none' ? 'block' : 'none';
 }
 
 loadTeams().then(() => {
