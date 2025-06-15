@@ -34,7 +34,7 @@ function showMessage(buyer, teamName) {
   }, 3000);
 }
 
-async function updateSoldStatus() {
+async function loadTeams() {
   try {
     const res = await fetch(endpoint);
     const soldSpots = await res.json();
@@ -43,22 +43,21 @@ async function updateSoldStatus() {
       const card = document.getElementById(teamId);
       if (!card) continue;
 
-      const previouslySold = teamStates[teamId]?.sold;
-      const newSold = !!buyer;
+      const wasSold = teamStates[teamId]?.sold || false;
+      const isNowSold = !!buyer;
 
-      if (newSold && !previouslySold) {
-        card.classList.add('flip');
+      if (isNowSold && !wasSold) {
+        // Animate once on change
+        showAnnouncement(`${buyer} has received ${teamId.toUpperCase()}!`);
+        card.classList.add('sold', 'flip');
         setTimeout(() => {
-          card.classList.add('sold');
           card.classList.remove('flip');
         }, 800);
-
-        const teamName = card.dataset.name;
-        showMessage(buyer, teamName);
+      } else if (isNowSold) {
+        card.classList.add('sold');
       }
+      teamStates[teamId] = { sold: isNowSold };
     }
-    
-      teamStates[teamId] = { sold: newSold };
   } catch (err) {
     console.error('Error loading teams:', err);
   }
