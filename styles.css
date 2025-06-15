@@ -83,12 +83,11 @@ body {
   color: inherit;
 }
 #marquee .marquee-inner span.breaking {
-  color: white !important;
-  background: red !important;
+  color: #fff !important;
+  background: #ff0000 !important;
   font-weight: bold !important;
   padding: 2px 4px;
   border-radius: 4px;
-  display: inline !important;
 }
 @keyframes scroll-marquee {
   0% { transform: translateX(0%); }
