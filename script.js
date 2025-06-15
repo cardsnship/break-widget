@@ -174,12 +174,6 @@ function toggleBuyerList() {
 
 window.addEventListener('load', () => {
   loadTeams().then(updateBuyerList);
-  initMarquee();
-});
-
-document.getElementById('toggle-buyer-list').addEventListener('click', () => {
-  const buyerList = document.getElementById('buyer-list');
-  buyerList.style.display = buyerList.style.display === 'none' ? 'grid' : 'none';
 });
 
 const speedPixelsPerSecond = 50;
@@ -241,6 +235,8 @@ function initMarquee() {
     marqueeInner.style.animation = '';
   });
 }
+
+initMarquee();
 
 window.addEventListener('load', initMarquee);
 
