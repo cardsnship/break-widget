@@ -163,7 +163,7 @@ function toggleMarquee() {
   const marquee = document.getElementById('marquee');
   marquee.style.display = marquee.style.display === 'none' ? 'block' : 'none';
   if (marquee.style.display === 'block') {
-    setScrollSpeed();
+    initMarquee();
   }
 }
 
@@ -222,25 +222,26 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-const highlightedNews = newsItems.map(item =>
-  item.replace("BREAKING:", '<span class="breaking">BREAKING:</span>')
-);
-const shuffledNews = shuffle(highlightedNews);
-const loopedText = shuffledNews.join("  🔥🏈🔥  ");
-marqueeInner.innerHTML = `<span style="padding-left: 100%">${loopedText}  🔥🏈🔥  ${loopedText}</span>`;
+function initMarquee() {
+  const highlightedNews = newsItems.map(item =>
+    item.replace("BREAKING:", '<span class="breaking">BREAKING:</span>')
+  );
+  const shuffledNews = shuffle(highlightedNews);
+  const loopedText = shuffledNews.join("  🔥🏈🔥  ");
+  marqueeInner.innerHTML = `${loopedText}  🔥🏈🔥  ${loopedText}`;
+  marqueeInner.style.transform = 'translateX(0)';
 
-requestAnimationFrame(() => {
-  const textWidth = marqueeInner.scrollWidth;
-  const duration = textWidth / speedPixelsPerSecond;
-  marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
-  marqueeInner.style.animation = 'none';
-  void marqueeInner.offsetWidth;
-  marqueeInner.style.animation = '';
-});
+  requestAnimationFrame(() => {
+    const textWidth = marqueeInner.scrollWidth;
+    const duration = textWidth / speedPixelsPerSecond;
+    marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
+    marqueeInner.style.animation = 'none';
+    void marqueeInner.offsetWidth;
+    marqueeInner.style.animation = '';
+  });
+}
 
-window.addEventListener('load', () => {
-  setScrollSpeed();
-});
+window.addEventListener('load', initMarquee);
 
 document.addEventListener('mousemove', e => {
   const el = document.elementFromPoint(e.clientX, e.clientY);
