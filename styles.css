@@ -82,8 +82,8 @@ body {
   animation: scroll-marquee var(--scroll-time) linear infinite;
   color: inherit;
 }
-#marquee .marquee-inner span.breaking {
-  color: #fff !important;
+.breaking {
+  color: #ffffff !important;
   background: #ff0000 !important;
   font-weight: bold !important;
   padding: 2px 4px;
