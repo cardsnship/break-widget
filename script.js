@@ -59,7 +59,6 @@ async function updateSoldStatus() {
     }
     
       teamStates[teamId] = { sold: newSold };
-    }
   } catch (err) {
     console.error('Error loading teams:', err);
   }
