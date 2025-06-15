@@ -235,7 +235,7 @@ function initMarquee() {
   requestAnimationFrame(() => {
     const textWidth = marqueeInner.scrollWidth;
     const duration = textWidth / speedPixelsPerSecond;
-    marqueeInner.style.setProperty('--scroll-time', ${duration}s);
+    marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
     marqueeInner.style.animation = 'none';
     void marqueeInner.offsetWidth;
     marqueeInner.style.animation = '';
