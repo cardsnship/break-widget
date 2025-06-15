@@ -150,7 +150,7 @@ function executeTrade() {
     const tempBuyer = teamStates[team1].buyer;
     teamStates[team1].buyer = teamStates[team2].buyer;
     teamStates[team2].buyer = tempBuyer;
-    showMessage(Trade executed: ${team1} ⇄ ${team2});
+    showMessage('Trade executed: ${team1} ⇄ ${team2}');
     updateBuyerList();
   }
 }
