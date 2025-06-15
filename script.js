@@ -229,7 +229,7 @@ function initMarquee() {
   );
   const shuffledNews = shuffle(highlightedNews);
   const loopedText = shuffledNews.join("  🔥🏈🔥  ");
-  marqueeInner.innerHTML = ${loopedText}  🔥🏈🔥  ${loopedText};
+  marqueeInner.innerHTML = `${loopedText}  🔥🏈🔥  ${loopedText}`;
   marqueeInner.style.transform = 'translateX(0)';
 
   requestAnimationFrame(() => {
