@@ -25,7 +25,7 @@ async function loadTeams() {
         
         card.addEventListener('click', () => {
           if (!teamStates[team.id].sold) {
-            const buyer = prompt(`Enter buyer name for ${team.name}:`);
+            const buyer = prompt(`Enter buyer name for ${team.id}:`);
             if (buyer) {
               teamStates[team.id].sold = true;
               card.classList.add('flip');
