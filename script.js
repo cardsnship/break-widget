@@ -100,6 +100,11 @@ loadTeams().then(() => {
   updateBuyerList();
 });
 
+document.getElementById('toggle-buyer-list').addEventListener('click', () => {
+  const buyerList = document.getElementById('buyer-list');
+  buyerList.style.display = buyerList.style.display === 'none' ? 'grid' : 'none';
+});
+
 const speedPixelsPerSecond = 50;
 
 const newsItems = [
