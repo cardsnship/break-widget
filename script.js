@@ -60,9 +60,9 @@ async function loadTeams() {
 
 function updateBuyerList() {
   buyerListContainer.innerHTML = '';
-  const soldTeams = Object.entries(teamStates).filter(([_, state]) => state.sold);
 
-  soldTeams.forEach(([teamId, state]) => {
+  const teamOrder = Object.keys(teamStates); // Always 32 boxes
+  teamOrder.forEach(teamId => {
     const row = document.createElement('div');
     row.className = 'buyer-row';
 
@@ -72,8 +72,7 @@ function updateBuyerList() {
 
     const name = document.createElement('div');
     name.className = 'buyer-name';
-    name.textContent = state.buyer;
-    name.style.fontSize = state.buyer.length > 15 ? '0.8rem' : '1rem';
+    name.textContent = teamStates[teamId].sold ? teamStates[teamId].buyer : '';
 
     row.appendChild(logo);
     row.appendChild(name);
