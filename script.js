@@ -7,12 +7,8 @@ const teamStates = {};
 
 async function loadTeams() {
   try {
-    const [teamRes, soldRes] = await Promise.all([
-      fetch('data/teams_' + sport + '.json'),
-      fetch('https://cardsnship-sold-spots-vercel.vercel.app/api/sold_spots?sport=' + sport)
-    ]);
+    const teamRes = await fetch('data/teams_' + sport + '.json');
     const teams = await teamRes.json();
-    const sold = await soldRes.json();
 
     if (!teamContainer.hasChildNodes()) {
       teams.forEach(team => {
@@ -27,7 +23,7 @@ async function loadTeams() {
 
         card.addEventListener('click', () => {
           if (!teamStates[team.id].sold) {
-            const buyer = prompt(`Enter buyer name for ${team.id}:`);
+            const buyer = prompt(`Enter buyer name for ${team.name}:`);
             if (buyer) {
               teamStates[team.id].sold = true;
               card.classList.add('flip');
@@ -44,22 +40,6 @@ async function loadTeams() {
         teamStates[team.id] = { sold: false };
       });
     }
-
-    for (const [teamId, buyer] of Object.entries(sold)) {
-      const card = document.getElementById(teamId);
-      if (!card) continue;
-      const alreadySold = teamStates[teamId].sold;
-
-      if (!alreadySold) {
-        teamStates[teamId].sold = true;
-        card.classList.add('flip');
-        setTimeout(() => {
-          card.classList.add('sold');
-          card.classList.remove('flip');
-          showMessage(`${buyer} has received ${teamId}!`);
-        }, 800);
-      }
-    }
   } catch (err) {
     console.error('Error loading teams:', err);
   }
@@ -74,7 +54,6 @@ function showMessage(text) {
 }
 
 loadTeams();
-setInterval(loadTeams, 5000);
 
 const speedPixelsPerSecond = 50;
 
@@ -117,13 +96,11 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-function highlightBreaking(text) {
-  return text.replace(/BREAKING:/g, `<span class="breaking">BREAKING:</span>`);
-}
-
-const shuffledNews = shuffle(newsItems);
-const highlightedNews = shuffledNews.map(highlightBreaking);
-const loopedText = highlightedNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + highlightedNews.join("  🔥🏈🔥  ");
+const highlightedNews = newsItems.map(item =>
+  item.replace(/BREAKING:/g, '<span class="breaking">BREAKING:</span>')
+);
+const shuffledNews = shuffle(highlightedNews);
+const loopedText = shuffledNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + shuffledNews.join("  🔥🏈🔥  ");
 marqueeInner.innerHTML = loopedText;
 
 function setScrollSpeed() {
