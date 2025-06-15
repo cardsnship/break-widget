@@ -177,6 +177,11 @@ document.getElementById('toggle-buyer-list').addEventListener('click', () => {
   buyerList.style.display = buyerList.style.display === 'none' ? 'grid' : 'none';
 });
 
+window.addEventListener('load', () => {
+  loadTeams().then(updateBuyerList);
+  initMarquee();
+});
+
 const speedPixelsPerSecond = 50;
 
 const newsItems = [
@@ -243,9 +248,4 @@ document.addEventListener('mousemove', e => {
     document.querySelectorAll('.__hover_debug').forEach(el => el.classList.remove('__hover_debug'));
     el.classList.add('__hover_debug');
   }
-});
-
-window.addEventListener('load', () => {
-  loadTeams().then(updateBuyerList);
-  initMarquee();
 });
