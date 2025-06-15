@@ -33,7 +33,7 @@ body {
   position: relative;
   cursor: pointer;
   pointer-events: auto;
-  z-index: 100;
+  z-index: 11;
 }
 .team-card img {
   width: 90px;
@@ -80,7 +80,7 @@ body {
   padding: 5px;
   text-align: center;
   pointer-events: none;
-  z-index: 0;
+  z-index: 12;
 }
 #marquee .marquee-inner {
   display: inline-block;
