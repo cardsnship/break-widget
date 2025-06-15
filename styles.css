@@ -74,18 +74,13 @@ body {
   padding: 5px;
   text-align: center;
 }
-.marquee-inner {
+#marquee .marquee-inner {
   display: inline-block;
   white-space: nowrap;
   will-change: transform;
-  animation: scroll-marquee linear infinite;
-  animation-duration: var(--scroll-time);
+  animation: scrollLeft 20s linear infinite;
 }
 @keyframes scroll-marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
