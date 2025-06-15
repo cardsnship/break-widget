@@ -98,21 +98,17 @@ const newsItems = [
   "BREAKING: Cards n Ship Pulls So Much Heat, USPS Now Delivers Packages Wearing Oven Mitts",
 ];
 
-const highlightedNews = shuffledNews.map(item => {
-  if (item.startsWith("BREAKING:")) {
-    return `<span class="breaking">BREAKING:</span>${item.slice(8)}`;
-  }
-  return item;
-});
-
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
+function highlightBreaking(text) {
+  return text.replaceAll("BREAKING:", `<span class="breaking">BREAKING:</span>`);
+}
+
 const shuffledNews = shuffle(newsItems);
-
+const highlightedNews = shuffledNews.map(highlightBreaking);
 const loopedText = highlightedNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + highlightedNews.join("  🔥🏈🔥  ");
-
 marqueeInner.innerHTML = loopedText;
 
 function setScrollSpeed() {
