@@ -1,8 +1,6 @@
 const teamContainer = document.getElementById('teams');
-const marquee = document.getElementById('marquee');
-const marqueeText = marquee.querySelector('span');
 const messageBox = document.getElementById('message-box');
-const marqueeInner = document.querySelector('.marquee-inner');
+const marqueeInner = document.getElementById('marquee-inner');
 
 const sport = new URLSearchParams(window.location.search).get('sport') || 'nfl';
 const teamStates = {};
@@ -100,8 +98,14 @@ const newsItems = [
   "BREAKING: Cards n Ship Pulls So Much Heat, USPS Now Delivers Packages Wearing Oven Mitts",
 ];
 
-const shuffledNews = newsItems.sort(() => Math.random() - 0.5);
-marqueeText.textContent = shuffledNews.join("   🏈🔥🏈   ");
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+const shuffledNews = shuffle(newsItems);
+const loopedText = shuffledNews.join(" | ") + " | " + shuffledNews.join(" | ");
+
+marqueeInner.textContent = loopedText;
 
 function setScrollSpeed() {
   const textWidth = marqueeInner.scrollWidth;
