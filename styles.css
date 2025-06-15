@@ -67,10 +67,7 @@ body {
   z-index: 12;
 }
 #marquee {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 5px auto 0 auto;
   width: 1080px;
   color: #e0e0e0;
   white-space: nowrap;
