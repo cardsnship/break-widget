@@ -157,7 +157,7 @@ body {
 #admin-controls {
   position: absolute;
   left: 0;
-  top: 400px;
+  top: 150px;
   display: flex;
   flex-direction: column;
   gap: 10px;
