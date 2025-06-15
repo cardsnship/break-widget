@@ -96,9 +96,9 @@ function showMessage(text) {
   }, 4000);
 }
 
-loadTeams();
-
-updateBuyerList();
+loadTeams().then(() => {
+  updateBuyerList();
+});
 
 const speedPixelsPerSecond = 50;
 
