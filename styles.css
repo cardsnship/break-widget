@@ -54,21 +54,26 @@ body {
 }
 #message-box {
   position: absolute;
-  top: 180px;
+  top: 140px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, #222, #444);
-  color: #f0f0f0;
-  padding: 14px 28px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  border-left: 6px solid #FFD700;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #000;
-  display: none;
+  background: #000;
+  color: #00ffff;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  border: 3px solid #00ffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  animation: neonPulse 2s ease-in-out infinite alternate;
   z-index: 100;
-  animation: toastFade 4s ease-in-out;
 }
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 20px #00ffff; }
+  100% { box-shadow: 0 0 40px #00ffff; }
+}
+
 #marquee {
   position: absolute;
   top: 450px;
