@@ -80,10 +80,7 @@ body {
   will-change: transform;
   transform: translateX(0);
   animation: scroll-marquee var(--scroll-time) linear infinite;
-}
-@keyframes scroll-marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  color: inherit;
 }
 .breaking {
   color: white;
@@ -91,4 +88,8 @@ body {
   font-weight: bold;
   padding: 4px;
   border-radius: 3px;
+}
+@keyframes scroll-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
