@@ -7,10 +7,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button id="toggle-buyer-list">Show/Hide Buyer List</button>
   <div id="teams"></div>
   <div id="message-box"></div>
   <div id="buyer-list"></div>
+  <div id="admin-controls">
+  <button onclick="resetAllTeams()">Reset All Teams</button>
+  <button onclick="undoLastAction()">Undo Last Action</button>
+  <button onclick="manualEditBuyer()">Edit Team Buyer</button>
+  <button onclick="executeTrade()">Execute Trade</button>
+  <button onclick="toggleGrid()">Toggle Team Grid</button>
+  <button onclick="toggleMarquee()">Toggle Marquee</button>
+  <button onclick="buyerListContainer.style.display = buyerListContainer.style.display === 'none' ? 'block' : 'none'">Toggle Buyer List</button>
+  </div>
   <div id="marquee"><div class="marquee-inner" id="marquee-inner"></div></div>
   <script src="script.js"></script>
 </body>
