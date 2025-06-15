@@ -82,12 +82,13 @@ body {
   animation: scroll-marquee var(--scroll-time) linear infinite;
   color: inherit;
 }
-.breaking {
-  color: white;
-  background-color: red;
-  font-weight: bold;
-  padding: 4px;
-  border-radius: 3px;
+#marquee .marquee-inner span.breaking {
+  color: white !important;
+  background: red !important;
+  font-weight: bold !important;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: inline !important;
 }
 @keyframes scroll-marquee {
   0% { transform: translateX(0%); }
