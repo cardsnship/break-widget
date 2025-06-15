@@ -101,7 +101,7 @@ body {
   white-space: nowrap;
   will-change: transform;
   transform: translateX(0);
-  animation: scroll-marquee var(--scroll-time) linear infinite;
+  animation: scroll-marquee var(--scroll-time, 60s) linear infinite;
   color: inherit;
 }
 @keyframes scroll-marquee {
