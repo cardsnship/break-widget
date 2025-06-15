@@ -154,14 +154,14 @@ body {
   font-size: 1.75rem;
 }
 #admin-controls {
-  position: absolute;
-  left: 0;
+  position: fixed;
+  left: 10px;
   top: 150px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-  z-index: 100;
+  z-index: 1;
 }
 
 #admin-controls button {
