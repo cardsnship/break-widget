@@ -8,11 +8,12 @@ body {
   position: relative;
 }
 #teams {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 6px 10px;
   padding: 10px;
-  max-width: 870px;
+  max-width: 840px;
   justify-items: center;
   align-items: center;
 }
