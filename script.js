@@ -172,11 +172,6 @@ function toggleBuyerList() {
   list.style.display = list.style.display === 'none' ? 'grid' : 'none';
 }
 
-window.addEventListener('load', () => {
-  loadTeams().then(updateBuyerList);
-  initMarquee();
-});
-
 document.getElementById('toggle-buyer-list').addEventListener('click', () => {
   const buyerList = document.getElementById('buyer-list');
   buyerList.style.display = buyerList.style.display === 'none' ? 'grid' : 'none';
@@ -242,12 +237,15 @@ function initMarquee() {
   });
 }
 
-window.addEventListener('load', initMarquee);
-
 document.addEventListener('mousemove', e => {
   const el = document.elementFromPoint(e.clientX, e.clientY);
   if (el) {
     document.querySelectorAll('.__hover_debug').forEach(el => el.classList.remove('__hover_debug'));
     el.classList.add('__hover_debug');
   }
+});
+
+window.addEventListener('load', () => {
+  loadTeams().then(updateBuyerList);
+  initMarquee();
 });
