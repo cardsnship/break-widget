@@ -176,7 +176,7 @@ window.addEventListener('load', () => {
   loadTeams().then(updateBuyerList);
 });
 
-const speedPixelsPerSecond = 50;
+const speedPixelsPerSecond = 56;
 
 const newsItems = [
   "Jets Install Emergency Darkness Retreat Room for Aaron Rodgers' Post-Sack Recovery",
