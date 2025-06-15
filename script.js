@@ -98,6 +98,8 @@ function showMessage(text) {
 
 loadTeams();
 
+updateBuyerList();
+
 const speedPixelsPerSecond = 50;
 
 const newsItems = [
