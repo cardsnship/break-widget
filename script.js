@@ -89,8 +89,7 @@ const newsItems = [
   "Daniel Jones Seen Practicing Blindfolded – Colts Say It’s ‘An Improvement’",
   "Second‑Round Rookies Holding Teams Hostage—Every NFL G‑M Now Googling 'How to Avoid Salary Revolt'",
   "Caleb Williams Demands Creative Input on Bears Playbook – Adds 'TikTok Trick Play #2'",
-  "Anthony Richardson’s Body is 100% Healthy – Colts Announce They’ll Sit Him Just to Be Safe",
-  
+  "Anthony Richardson’s Body is 100% Healthy – Colts Announce They’ll Sit Him Just to Be Safe"  
 ];
 
 function cycleNews() {
