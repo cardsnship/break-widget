@@ -62,7 +62,7 @@ body {
 #marquee {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 1080px;
   background: #222;
   color: #e0e0e0;
   white-space: nowrap;
