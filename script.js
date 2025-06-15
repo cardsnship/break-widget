@@ -31,7 +31,7 @@ async function loadTeams() {
         
         card.addEventListener('click', () => {
           if (!teamStates[team.id].sold) {
-            const buyer = prompt(Enter buyer name for ${team.id}:);
+            const buyer = prompt('Enter buyer name for ${team.id}:');
             if (buyer) {
               teamStates[team.id].sold = true;
               teamStates[team.id].buyer = buyer;
