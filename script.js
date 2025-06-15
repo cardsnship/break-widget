@@ -229,20 +229,20 @@ function initMarquee() {
   );
   const shuffledNews = shuffle(highlightedNews);
   const loopedText = shuffledNews.join("  🔥🏈🔥  ");
-  marqueeInner.innerHTML = ${loopedText}  🔥🏈🔥  ${loopedText};
-  marqueeInner.style.transform = 'translateX(0)';
+  marqueeInner.innerHTML = `<div class="marquee-start">${loopedText}  🔥🏈🔥  ${loopedText}</div>`;
+
+  // Immediately position left so the marquee content is visible from frame 0
+  marqueeInner.scrollLeft = 0;
 
   requestAnimationFrame(() => {
     const textWidth = marqueeInner.scrollWidth;
     const duration = textWidth / speedPixelsPerSecond;
-    marqueeInner.style.setProperty('--scroll-time', ${duration}s);
+    marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
     marqueeInner.style.animation = 'none';
     void marqueeInner.offsetWidth;
     marqueeInner.style.animation = '';
   });
 }
-
-window.addEventListener('load', initMarquee);
 
 document.addEventListener('mousemove', e => {
   const el = document.elementFromPoint(e.clientX, e.clientY);
