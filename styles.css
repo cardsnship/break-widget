@@ -86,9 +86,9 @@ body {
   100% { transform: translateX(-100%); }
 }
 .breaking {
-  color: white !important;
-  background-color: red !important;
-  font-weight: bold !important;
-  padding: 0 4px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  padding: 4px;
   border-radius: 3px;
 }
