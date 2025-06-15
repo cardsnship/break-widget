@@ -24,7 +24,6 @@ async function loadTeams() {
         teamStates[team.id] = { sold: false };
         
         card.addEventListener('click', () => {
-          console.log(`Clicked ${team.id}`);
           if (!teamStates[team.id].sold) {
             const buyer = prompt(`Enter buyer name for ${team.id}:`);
             if (buyer) {
@@ -35,6 +34,13 @@ async function loadTeams() {
                 card.classList.remove('flip');
                 showMessage(`${buyer} has received ${team.name}!`);
               }, 800);
+            }
+          } else {
+            const confirmUndo = confirm(`Remove ${team.id} from the sold list?`);
+            if (confirmUndo) {
+              teamStates[team.id].sold = false;
+              card.classList.remove('sold');
+              showMessage(`${team.id} is back on the board!`);
             }
           }
         });
