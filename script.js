@@ -230,9 +230,15 @@ function setScrollSpeed() {
   const textWidth = marqueeInner.scrollWidth;
   const duration = textWidth / speedPixelsPerSecond;
   marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
+
+  marqueeInner.style.animation = 'none';
+  void marqueeInner.offsetWidth; // Trigger reflow
+  marqueeInner.style.animation = null; // Reapply animation
 }
 
-window.addEventListener('load', setScrollSpeed);
+window.addEventListener('load', () => {
+  setScrollSpeed();
+});
 
 document.addEventListener('mousemove', e => {
   const el = document.elementFromPoint(e.clientX, e.clientY);
