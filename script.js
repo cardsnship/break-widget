@@ -62,7 +62,6 @@ function showMessage(text) {
 loadTeams();
 setInterval(loadTeams, 5000);
 
-// Fake sports news
 const newsItems = [
   "Jets Install Emergency Darkness Retreat Room for Aaron Rodgers' Post-Sack Recovery",
   "Travis Kelce to Drop Surprise Christmas Album Featuring Taylor Swift and the Eagles D-Line",
@@ -92,12 +91,9 @@ const newsItems = [
   "Anthony Richardson’s Body is 100% Healthy – Colts Announce They’ll Sit Him Just to Be Safe"  
 ];
 
-function cycleNews() {
-  let i = 0;
-  setInterval(() => {
-    marqueeText.textContent = newsItems[i % newsItems.length];
-    i++;
-  }, 12000);
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
 }
 
-cycleNews();
+const shuffledNews = shuffle(newsItems);
+marqueeText.textContent = shuffledNews.join(" | ");
