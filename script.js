@@ -2,6 +2,7 @@ const teamContainer = document.getElementById('teams');
 const marquee = document.getElementById('marquee');
 const marqueeText = marquee.querySelector('span');
 const messageBox = document.getElementById('message-box');
+const marqueeInner = document.querySelector('.marquee-inner');
 
 const sport = new URLSearchParams(window.location.search).get('sport') || 'nfl';
 const teamStates = {};
@@ -62,6 +63,8 @@ function showMessage(text) {
 loadTeams();
 setInterval(loadTeams, 5000);
 
+const speedPixelsPerSecond = 54;
+
 const newsItems = [
   "Jets Install Emergency Darkness Retreat Room for Aaron Rodgers' Post-Sack Recovery",
   "Travis Kelce to Drop Surprise Christmas Album Featuring Taylor Swift and the Eagles D-Line",
@@ -97,9 +100,13 @@ const newsItems = [
   "BREAKING: Cards n Ship Pulls So Much Heat, USPS Now Delivers Packages Wearing Oven Mitts",
 ];
 
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+const shuffledNews = newsItems.sort(() => Math.random() - 0.5);
+marqueeText.textContent = shuffledNews.join("   🏈🔥🏈   ");
+
+function setScrollSpeed() {
+  const textWidth = marqueeInner.scrollWidth;
+  const duration = textWidth / speedPixelsPerSecond;
+  marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
 }
 
-const shuffledNews = newsItems.sort(() => Math.random() - 0.5);
-marqueeText.textContent = shuffledNews.join("   🔥   ");
+setTimeout(setScrollSpeed, 100);
