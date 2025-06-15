@@ -76,6 +76,15 @@ body {
 }
 #marquee span {
   display: inline-block;
-  white-space: nowrap;
-  will-change: transform;
+  min-width: 100%;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
