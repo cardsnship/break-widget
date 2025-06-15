@@ -88,7 +88,13 @@ const newsItems = [
   "Daniel Jones Seen Practicing Blindfolded – Colts Say It’s ‘An Improvement’",
   "Second‑Round Rookies Holding Teams Hostage—Every NFL G‑M Now Googling 'How to Avoid Salary Revolt'",
   "Caleb Williams Demands Creative Input on Bears Playbook – Adds 'TikTok Trick Play #2'",
-  "Anthony Richardson’s Body is 100% Healthy – Colts Announce They’ll Sit Him Just to Be Safe"  
+  "Anthony Richardson’s Body is 100% Healthy – Colts Announce They’ll Sit Him Just to Be Safe",
+  "Sources Confirm: Cards n Ship Has Pulled More Fire This Week Than the Jets Offense All Season",
+  "Cards n Ship Adds Emotional Support Hotline for Skunked Buyers — Now with Live Hold Music from a Dak Prescott Interception",
+  "BREAKING: Cards n Ship Pulls So Much Heat, PSA Called and Asked for a Restraining Order",
+  "Rumor: Mahomes Watches Cards n Ship Before Games to Remember What a Winner Looks Like",
+  "BREAKING: Cards n Ship Pulls So Many Golds, Panini Sent a Cease and Desist… Then Asked for a Spot",
+  "BREAKING: Cards n Ship Pulls So Much Heat, USPS Now Delivers Packages Wearing Oven Mitts",
 ];
 
 function shuffle(array) {
