@@ -103,8 +103,7 @@ function shuffle(array) {
 }
 
 const shuffledNews = shuffle(newsItems);
-const loopedText = shuffledNews.join(" | ") + " | " + shuffledNews.join(" | ");
-
+const loopedText = shuffledNews.join("  |  ");
 marqueeInner.textContent = loopedText;
 
 function setScrollSpeed() {
