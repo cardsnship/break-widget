@@ -40,18 +40,18 @@ async function loadTeams() {
               setTimeout(() => {
                 card.classList.add('sold');
                 card.classList.remove('flip');
-                showMessage(${buyer} has received ${team.name}!);
+                showMessage('${buyer} has received ${team.name}!');
                 updateBuyerList();
               }, 800);
             }
           } else {
-            const confirmUndo = confirm(Remove ${team.id} from the sold list?);
+            const confirmUndo = confirm('Remove ${team.id} from the sold list?');
             if (confirmUndo) {
               logAction({ type: 'unsell', teamId: team.id, previousBuyer: teamStates[team.id].buyer });
               teamStates[team.id].sold = false;
               teamStates[team.id].buyer = null;
               card.classList.remove('sold');
-              showMessage(${team.id} is back on the board!);
+              showMessage('${team.id} is back on the board!');
               updateBuyerList();
             }
           }
@@ -120,12 +120,12 @@ function undoLastAction() {
     teamStates[last.teamId].sold = false;
     teamStates[last.teamId].buyer = null;
     card.classList.remove('sold');
-    showMessage(Undo: ${last.teamId} is now available.);
+    showMessage('Undo: ${last.teamId} is now available.');
   } else if (last.type === 'unsell') {
     teamStates[last.teamId].sold = true;
     teamStates[last.teamId].buyer = last.previousBuyer;
     card.classList.add('sold');
-    showMessage(Undo: ${last.teamId} re-assigned to ${last.previousBuyer});
+    showMessage('Undo: ${last.teamId} re-assigned to ${last.previousBuyer}');
   }
   updateBuyerList();
 }
@@ -133,12 +133,12 @@ function undoLastAction() {
 function manualEditBuyer() {
   const teamId = prompt('Enter team ID to edit:');
   if (!teamId || !teamStates[teamId]) return;
-  const newBuyer = prompt(Enter new buyer name for ${teamId}:);
+  const newBuyer = prompt('Enter new buyer name for ${teamId}:');
   if (newBuyer) {
     teamStates[teamId].sold = true;
     teamStates[teamId].buyer = newBuyer;
     document.getElementById(teamId).classList.add('sold');
-    showMessage(${teamId} now belongs to ${newBuyer});
+    showMessage('${teamId} now belongs to ${newBuyer}');
     updateBuyerList();
   }
 }
