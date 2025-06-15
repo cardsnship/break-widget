@@ -21,6 +21,8 @@ async function loadTeams() {
         img.src = team.logo;
         card.appendChild(img);
 
+        teamStates[team.id] = { sold: false };
+        
         card.addEventListener('click', () => {
           if (!teamStates[team.id].sold) {
             const buyer = prompt(`Enter buyer name for ${team.name}:`);
@@ -37,7 +39,6 @@ async function loadTeams() {
         });
         
         teamContainer.appendChild(card);
-        teamStates[team.id] = { sold: false };
       });
     }
   } catch (err) {
