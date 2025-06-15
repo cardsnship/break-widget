@@ -63,7 +63,7 @@ function showMessage(text) {
 loadTeams();
 setInterval(loadTeams, 5000);
 
-const speedPixelsPerSecond = 65;
+const speedPixelsPerSecond = 50;
 
 const newsItems = [
   "Jets Install Emergency Darkness Retreat Room for Aaron Rodgers' Post-Sack Recovery",
