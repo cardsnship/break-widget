@@ -164,6 +164,11 @@ function toggleMarquee() {
   marquee.style.display = marquee.style.display === 'none' ? 'block' : 'none';
 }
 
+function toggleBuyerList() {
+  const list = document.getElementById('buyer-list');
+  list.style.display = list.style.display === 'none' ? 'grid' : 'none';
+}
+
 loadTeams().then(() => {
   updateBuyerList();
 });
