@@ -57,21 +57,23 @@ body {
   top: 140px;
   left: 50%;
   transform: translateX(-50%);
-  background: #000;
-  color: #00ffff;
-  padding: 20px 40px;
-  font-size: 1.8rem;
-  font-weight: 900;
-  border: 3px solid #00ffff;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-  animation: neonPulse 2s ease-in-out infinite alternate;
+  background: red;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 16px 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px red;
+  animation: shakeBox 0.4s ease-in-out 0s 5;
   z-index: 100;
 }
 
-@keyframes neonPulse {
-  0% { box-shadow: 0 0 20px #00ffff; }
-  100% { box-shadow: 0 0 40px #00ffff; }
+@keyframes shakeBox {
+  0%   { transform: translateX(-50%) translateY(0); }
+  25%  { transform: translateX(-48%) translateY(-2px); }
+  50%  { transform: translateX(-52%) translateY(2px); }
+  75%  { transform: translateX(-48%) translateY(-2px); }
+  100% { transform: translateX(-50%) translateY(0); }
 }
 
 #marquee {
