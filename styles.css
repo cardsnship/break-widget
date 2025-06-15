@@ -60,13 +60,6 @@ body {
   display: none;
   z-index: 10;
 }
-.breaking {
-  color: white;
-  background-color: red;
-  font-weight: bold;
-  padding: 0 4px;
-  border-radius: 3px;
-}
 #marquee {
   position: absolute;
   bottom: 0;
@@ -91,4 +84,11 @@ body {
 @keyframes scroll-marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
+}
+.breaking {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  padding: 0 4px;
+  border-radius: 3px;
 }
