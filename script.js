@@ -172,8 +172,9 @@ function toggleBuyerList() {
   list.style.display = list.style.display === 'none' ? 'grid' : 'none';
 }
 
-loadTeams().then(() => {
-  updateBuyerList();
+window.addEventListener('load', () => {
+  loadTeams().then(updateBuyerList);
+  initMarquee();
 });
 
 document.getElementById('toggle-buyer-list').addEventListener('click', () => {
