@@ -103,8 +103,13 @@ function shuffle(array) {
 }
 
 const shuffledNews = shuffle(newsItems);
-const loopedText = shuffledNews.join("  🔥🏈🔥  ");
-marqueeInner.textContent = loopedText;
+const highlightedNews = shuffledNews.map(item =>
+  item.startsWith("BREAKING:") ?
+    `<span class="breaking">BREAKING:</span>${item.slice(8)}` :
+    item
+);
+const loopedText = highlightedNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + highlightedNews.join("  🔥🏈🔥  ");
+marqueeInner.innerHTML = loopedText;
 
 function setScrollSpeed() {
   const textWidth = marqueeInner.scrollWidth;
