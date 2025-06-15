@@ -99,7 +99,7 @@ function shuffle(array) {
 }
 
 const highlightedNews = newsItems.map(item =>
-  item.replace(/BREAKING:/g, '<span class="breaking">BREAKING:</span>')
+  item.replace("BREAKING:", '<span class="breaking">BREAKING:</span>')
 );
 const shuffledNews = shuffle(highlightedNews);
 const loopedText = shuffledNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + shuffledNews.join("  🔥🏈🔥  ");
