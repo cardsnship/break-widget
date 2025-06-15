@@ -25,6 +25,21 @@ async function loadTeams() {
         img.src = team.logo;
         card.appendChild(img);
 
+        card.addEventListener('click', () => {
+          if (!teamStates[team.id].sold) {
+            const buyer = prompt(`Enter buyer name for ${team.id}:`);
+            if (buyer) {
+              teamStates[team.id].sold = true;
+              card.classList.add('flip');
+              setTimeout(() => {
+                card.classList.add('sold');
+                card.classList.remove('flip');
+                showMessage(`${buyer} has received ${team.id}!`);
+              }, 800);
+            }
+          }
+        });
+        
         teamContainer.appendChild(card);
         teamStates[team.id] = { sold: false };
       });
