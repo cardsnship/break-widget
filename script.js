@@ -24,6 +24,16 @@ async function initTeams() {
   });
 }
 
+function showMessage(buyer, teamName) {
+  const messageBox = document.getElementById('message-box');
+  messageBox.textContent = `${buyer} has received ${teamName}!`;
+  messageBox.style.opacity = 1;
+
+  setTimeout(() => {
+    messageBox.style.opacity = 0;
+  }, 3000);
+}
+
 async function updateSoldStatus() {
   try {
     const res = await fetch(endpoint);
@@ -33,22 +43,25 @@ async function updateSoldStatus() {
       const card = document.getElementById(teamId);
       if (!card) continue;
 
-      const wasSold = teamStates[teamId].sold;
-      const isSold = !!buyer;
+      const previouslySold = teamStates[teamId]?.sold;
+      const newSold = !!buyer;
 
-      if (isSold && !wasSold) {
-        card.classList.add('sold', 'flip');
+      if (newSold && !previouslySold) {
+        card.classList.add('flip');
+        setTimeout(() => {
+          card.classList.add('sold');
+          card.classList.remove('flip');
+        }, 800);
 
-        const buyerDiv = document.createElement('div');
-        buyerDiv.className = 'buyer';
-        buyerDiv.textContent = buyer;
-        card.appendChild(buyerDiv);
+        const teamName = card.dataset.name;
+        showMessage(buyer, teamName);
       }
-
-      teamStates[teamId].sold = isSold;
+    }
+    
+      teamStates[teamId] = { sold: newSold };
     }
   } catch (err) {
-    console.error('Error updating sold teams:', err);
+    console.error('Error loading teams:', err);
   }
 }
 
