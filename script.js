@@ -106,7 +106,7 @@ const shuffledNews = shuffle(newsItems);
 
 const highlightedNews = shuffledNews.map(item => {
   if (item.startsWith("BREAKING:")) {
-    return `<span class=".breaking">BREAKING:</span>${item.slice(8)}`;
+    return `<span class="breaking">BREAKING:</span>${item.slice(8)}`;
   }
   return item;
 });
