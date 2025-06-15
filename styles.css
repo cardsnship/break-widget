@@ -105,6 +105,10 @@ body {
   animation: scroll-marquee var(--scroll-time) linear infinite;
   color: inherit;
 }
+@keyframes scroll-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
 .breaking {
   display: inline-block;
   color: #ffffff !important;
@@ -112,10 +116,6 @@ body {
   font-weight: bold !important;
   padding: 0 4px;
   border-radius: 3px;
-}
-@keyframes scroll-marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
 }
 .team-card:hover {
   outline: 3px solid limegreen !important;
