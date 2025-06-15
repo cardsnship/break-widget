@@ -11,8 +11,8 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 6px 10px;
-  padding: 10px;
+  gap: 6px 6px;
+  padding: 10px 10px 60px 10px;
   max-width: 840px;
   justify-items: center;
   align-items: center;
