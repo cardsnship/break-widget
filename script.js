@@ -1,6 +1,7 @@
 const teamContainer = document.getElementById('teams');
 const messageBox = document.getElementById('message-box');
 const marqueeInner = document.getElementById('marquee-inner');
+const buyerListContainer = document.getElementById('buyer-list');
 
 const sport = new URLSearchParams(window.location.search).get('sport') || 'nfl';
 const teamStates = {};
@@ -28,19 +29,23 @@ async function loadTeams() {
             const buyer = prompt(`Enter buyer name for ${team.id}:`);
             if (buyer) {
               teamStates[team.id].sold = true;
+              teamStates[team.id].buyer = buyer;
               card.classList.add('flip');
               setTimeout(() => {
                 card.classList.add('sold');
                 card.classList.remove('flip');
                 showMessage(`${buyer} has received ${team.name}!`);
+                updateBuyerList();
               }, 800);
             }
           } else {
             const confirmUndo = confirm(`Remove ${team.id} from the sold list?`);
             if (confirmUndo) {
               teamStates[team.id].sold = false;
+              teamStates[team.id].buyer = null;
               card.classList.remove('sold');
               showMessage(`${team.id} is back on the board!`);
+              updateBuyerList();
             }
           }
         });
@@ -51,6 +56,29 @@ async function loadTeams() {
   } catch (err) {
     console.error('Error loading teams:', err);
   }
+}
+
+function updateBuyerList() {
+  buyerListContainer.innerHTML = '';
+  const soldTeams = Object.entries(teamStates).filter(([_, state]) => state.sold);
+
+  soldTeams.forEach(([teamId, state]) => {
+    const row = document.createElement('div');
+    row.className = 'buyer-row';
+
+    const logo = document.createElement('img');
+    logo.src = document.getElementById(teamId).querySelector('img').src;
+    logo.className = 'buyer-logo';
+
+    const name = document.createElement('div');
+    name.className = 'buyer-name';
+    name.textContent = state.buyer;
+    name.style.fontSize = state.buyer.length > 15 ? '0.8rem' : '1rem';
+
+    row.appendChild(logo);
+    row.appendChild(name);
+    buyerListContainer.appendChild(row);
+  });
 }
 
 function showMessage(text) {
