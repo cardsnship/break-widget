@@ -74,13 +74,14 @@ body {
   padding: 5px;
   text-align: center;
 }
-#marquee span {
+.marquee-inner {
   display: inline-block;
-  min-width: 100%;
-  animation: scrollText 20s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll-marquee linear infinite;
+  animation-duration: var(--scroll-time);
 }
-
-@keyframes scrollText {
+@keyframes scroll-marquee {
   0% {
     transform: translateX(100%);
   }
