@@ -102,4 +102,4 @@ function shuffle(array) {
 }
 
 const shuffledNews = shuffle(newsItems);
-marqueeText.textContent = shuffledNews.join(" | ");
+marqueeText.textContent = shuffledNews.join("   |   ");
