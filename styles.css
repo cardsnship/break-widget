@@ -91,7 +91,7 @@ body {
   color: inherit;
 }
 .breaking {
-  display: inline;
+  display: inline-block;
   color: #ffffff !important;
   background: #ff0000 !important;
   font-weight: bold !important;
