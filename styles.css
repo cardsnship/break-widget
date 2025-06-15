@@ -105,6 +105,3 @@ body {
   outline: 2px solid limegreen !important;
   background: rgba(0, 255, 0, 0.1) !important;
 }
-.team-card:hover {
-  outline: 3px solid limegreen !important;
-}
