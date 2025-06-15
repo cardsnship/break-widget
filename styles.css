@@ -78,7 +78,7 @@ body {
   display: inline-block;
   white-space: nowrap;
   will-change: transform;
-  animation: scrollLeft 20s linear infinite;
+  animation: scroll-marquee var(--scroll-time) linear infinite;
 }
 @keyframes scroll-marquee {
   0% { transform: translateX(100%); }
