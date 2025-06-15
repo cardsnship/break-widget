@@ -103,7 +103,7 @@ function shuffle(array) {
 }
 
 function highlightBreaking(text) {
-  return text.replaceAll("BREAKING:", `<span class="breaking">BREAKING:</span>`);
+  return text.replace(/BREAKING:/g, `<span class="breaking">BREAKING:</span>`);
 }
 
 const shuffledNews = shuffle(newsItems);
