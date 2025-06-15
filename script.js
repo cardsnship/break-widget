@@ -87,7 +87,7 @@ const newsItems = [
   "Zach Wilson Now Training to Be Backup Quarterback… For Flag Football",
   "Brandon Aiyuk Demands WR1 Money – 49ers Offer Him 1 Target Per Game Instead",
   "Daniel Jones Seen Practicing Blindfolded – Colts Say It’s ‘An Improvement’",
-  "Second‑Round Rookies Holding Teams Hostage—Every NFL G‑M Now Googling 'How to Avoid Salary Revolt'",
+  "Second‑Round Rookies Holding Teams Hostage — Every NFL GM Now Googling 'How to Avoid Salary Revolt'",
   "Caleb Williams Demands Creative Input on Bears Playbook – Adds 'TikTok Trick Play #2'",
   "Anthony Richardson’s Body is 100% Healthy – Colts Announce They’ll Sit Him Just to Be Safe",
   "Sources Confirm: Cards n Ship Has Pulled More Fire This Week Than the Jets Offense All Season",
