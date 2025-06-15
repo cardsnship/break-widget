@@ -232,9 +232,7 @@ function setScrollSpeed() {
   marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
 }
 
-setTimeout(() => {
-  setScrollSpeed();
-}, 50);
+window.addEventListener('load', setScrollSpeed);
 
 document.addEventListener('mousemove', e => {
   const el = document.elementFromPoint(e.clientX, e.clientY);
