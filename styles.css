@@ -120,3 +120,39 @@ body {
 .team-card:hover {
   outline: 3px solid limegreen !important;
 }
+
+#buyer-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+  position: relative;
+}
+
+.buyer-row {
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 6px;
+  padding: 6px 10px;
+  border: 1px solid #444;
+}
+
+.buyer-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.buyer-name {
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
