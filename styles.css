@@ -61,6 +61,7 @@ body {
   z-index: 10;
 }
 #marquee {
+  margin: 0 auto;
   position: absolute;
   bottom: 0;
   width: 1080px;
