@@ -64,7 +64,7 @@ body {
   font-weight: bold;
   border-radius: 6px;
   display: none;
-  z-index: 0;
+  z-index: 12;
 }
 #marquee {
   position: absolute;
@@ -80,7 +80,7 @@ body {
   padding: 5px;
   text-align: center;
   pointer-events: none;
-  z-index: 12;
+  z-index: 1;
 }
 #marquee .marquee-inner {
   display: inline-block;
