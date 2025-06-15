@@ -231,7 +231,6 @@ function initMarquee() {
   const loopedText = shuffledNews.join("  🔥🏈🔥  ");
   marqueeInner.innerHTML = `<div class="marquee-start">${loopedText}  🔥🏈🔥  ${loopedText}</div>`;
 
-  // Immediately position left so the marquee content is visible from frame 0
   marqueeInner.scrollLeft = 0;
 
   requestAnimationFrame(() => {
