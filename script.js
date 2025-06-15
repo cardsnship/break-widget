@@ -101,5 +101,5 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-const shuffledNews = shuffle(newsItems);
+const shuffledNews = newsItems.sort(() => Math.random() - 0.5);
 marqueeText.textContent = shuffledNews.join("   🔥   ");
