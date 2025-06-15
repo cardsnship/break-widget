@@ -162,6 +162,9 @@ function toggleGrid() {
 function toggleMarquee() {
   const marquee = document.getElementById('marquee');
   marquee.style.display = marquee.style.display === 'none' ? 'block' : 'none';
+  if (marquee.style.display === 'block') {
+    setScrollSpeed();
+  }
 }
 
 function toggleBuyerList() {
@@ -223,18 +226,17 @@ const highlightedNews = newsItems.map(item =>
   item.replace("BREAKING:", '<span class="breaking">BREAKING:</span>')
 );
 const shuffledNews = shuffle(highlightedNews);
-const loopedText = shuffledNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + shuffledNews.join("  🔥🏈🔥  ");
-marqueeInner.innerHTML = loopedText;
+const loopedText = shuffledNews.join("  🔥🏈🔥  ");
+marqueeInner.innerHTML = `<span style="padding-left: 100%">${loopedText}  🔥🏈🔥  ${loopedText}</span>`;
 
-function setScrollSpeed() {
+requestAnimationFrame(() => {
   const textWidth = marqueeInner.scrollWidth;
   const duration = textWidth / speedPixelsPerSecond;
   marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
-
   marqueeInner.style.animation = 'none';
-  void marqueeInner.offsetWidth; // Trigger reflow
-  marqueeInner.style.animation = null; // Reapply animation
-}
+  void marqueeInner.offsetWidth;
+  marqueeInner.style.animation = '';
+});
 
 window.addEventListener('load', () => {
   setScrollSpeed();
