@@ -91,11 +91,12 @@ body {
   color: inherit;
 }
 .breaking {
+  display: inline;
   color: #ffffff !important;
   background: #ff0000 !important;
   font-weight: bold !important;
-  padding: 2px 4px;
-  border-radius: 4px;
+  padding: 0 4px;
+  border-radius: 3px;
 }
 @keyframes scroll-marquee {
   0% { transform: translateX(0%); }
