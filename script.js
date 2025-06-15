@@ -113,8 +113,6 @@ function setScrollSpeed() {
   marqueeInner.style.setProperty('--scroll-time', `${duration}s`);
 }
 
-requestAnimationFrame(() => {
-  requestAnimationFrame(() => {
-    setScrollSpeed();
-  });
-});
+setTimeout(() => {
+  setScrollSpeed();
+}, 50);
