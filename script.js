@@ -33,7 +33,7 @@ async function loadTeams() {
               setTimeout(() => {
                 card.classList.add('sold');
                 card.classList.remove('flip');
-                showMessage(`${buyer} has received ${team.id}!`);
+                showMessage(`${buyer} has received ${team.name}!`);
               }, 800);
             }
           }
