@@ -55,9 +55,17 @@ async function loadTeams() {
 
 function showMessage(text) {
   messageBox.textContent = text;
+
+  messageBox.style.animation = 'none';
+  void messageBox.offsetWidth;
+  
   messageBox.style.display = 'block';
+  messageBox.style.animation = 'popReveal 0.6s ease-out forwards';
+  
   setTimeout(() => {
     messageBox.style.display = 'none';
+    messageBox.style.transform = 'translateX(-50%) scale(0)';
+    messageBox.style.opacity = '0';
   }, 4000);
 }
 
