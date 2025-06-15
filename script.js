@@ -110,6 +110,7 @@ const highlightedNews = shuffledNews.map(item =>
 );
 const loopedText = highlightedNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + highlightedNews.join("  🔥🏈🔥  ");
 marqueeInner.innerHTML = loopedText;
+console.log(loopedText);
 
 function setScrollSpeed() {
   const textWidth = marqueeInner.scrollWidth;
