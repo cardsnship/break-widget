@@ -114,3 +114,11 @@ function setScrollSpeed() {
 setTimeout(() => {
   setScrollSpeed();
 }, 50);
+
+document.addEventListener('mousemove', e => {
+  const el = document.elementFromPoint(e.clientX, e.clientY);
+  if (el) {
+    document.querySelectorAll('.__hover_debug').forEach(el => el.classList.remove('__hover_debug'));
+    el.classList.add('__hover_debug');
+  }
+});
