@@ -102,14 +102,14 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-const shuffledNews = shuffle(newsItems);
-
 const highlightedNews = shuffledNews.map(item => {
   if (item.startsWith("BREAKING:")) {
-    return `<span style="color:white;background:red;font-weight:bold;padding:0 4px;border-radius:3px;">BREAKING:</span>${item.slice(8)}`;
+    return `<span class="breaking">BREAKING:</span>${item.slice(8)}`;
   }
   return item;
 });
+
+const shuffledNews = shuffle(newsItems);
 
 const loopedText = highlightedNews.join("  🔥🏈🔥  ") + "  🔥🏈🔥  " + highlightedNews.join("  🔥🏈🔥  ");
 
