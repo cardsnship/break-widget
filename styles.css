@@ -21,8 +21,8 @@ body {
   z-index: 10;
 }
 .team-card {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background: #222;
   display: flex;
   align-items: center;
@@ -36,8 +36,8 @@ body {
   z-index: 11;
 }
 .team-card img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 .team-card.sold {
   opacity: 0.35;
